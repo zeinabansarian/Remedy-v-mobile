@@ -3,6 +3,6 @@
     "tailwindcss": "^3.4.16"
   },
   "scripts": {
-    "build": "npx tailwindcss -i ./css/inputDesk.css -o ./css/outputDesk.css --watch"
+    "build": "npx tailwindcss -i ./css/inputMobile.css -o ./css/outputMobile.css --watch"
   }
 }
