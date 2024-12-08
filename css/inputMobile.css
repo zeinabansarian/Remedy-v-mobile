@@ -5,8 +5,7 @@
 @font-face {
   font-family: "YekanBakh400";
   src: url("../_fonts/YekanBakh-Regular.eot");
-  src: url("../_fonts/YekanBakh-Regular.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("../_fonts/YekanBakh-Regular.eot?#iefix") format("embedded-opentype"),
     url("../_fonts/YekanBakh-Regular.woff") format("woff"),
     url("../_fonts/YekanBakh-Regular.woff2") format("woff2"),
     url("../_fonts/YekanBakh-Regular.ttf") format("truetype");
@@ -17,8 +16,7 @@
 @font-face {
   font-family: "YekanBakh500";
   src: url("../_fonts/YekanBakh-Medium.eot");
-  src: url("../_fonts/YekanBakh-Medium.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("../_fonts/YekanBakh-Medium.eot?#iefix") format("embedded-opentype"),
     url("../_fonts/YekanBakh-Medium.woff") format("woff"),
     url("../_fonts/YekanBakh-Medium.woff2") format("woff2"),
     url("../_fonts/YekanBakh-Medium.ttf") format("truetype");
@@ -75,54 +73,100 @@
   font-display: swap;
 }
 
-*{
-    font-family: "IRANSans400";
+* {
+  font-family: "IRANSans400";
+}
+
+h1 {
+  font-size: 24px;
+  font-family: "IRANSans700";
+  line-height: 26px;
+}
+h2 {
+  font-size: 20px;
+  font-family: "IRANSans700";
+  line-height: 26px;
+}
+h3 {
+  font-size: 18px;
+  font-family: "IRANSans500";
+  line-height: 25px;
+}
+h4,
+h5 {
+  font-size: 16px;
+  font-family: "IRANSans400";
+  line-height: 24px;
+}
+h6 {
+  font-size: 14px;
+  font-family: "IRANSans400";
+  line-height: 22px;
+}
+a {
+  font-size: 14px;
+  font-family: "IRANSans500";
+  line-height: 24px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+.filterBtn.activeFilter {
+  background-color: white !important;
+}
+
+.blogList .loader {
+  width: 25px;
+  height: 50px;
+  display: grid;
+  color: #FC578C;
+  background: linear-gradient(currentColor 0 0) top/100% 2px,
+    radial-gradient(
+        farthest-side at top,
+        #0000 calc(100% - 2px),
+        currentColor calc(100% - 1px),
+        #0000
+      )
+      top,
+    linear-gradient(currentColor 0 0) bottom/100% 2px,
+    radial-gradient(
+        farthest-side at bottom,
+        #0000 calc(100% - 2px),
+        currentColor calc(100% - 1px),
+        #0000
+      )
+      bottom;
+  background-size: 100% 1px, 100% 50%;
+  background-repeat: no-repeat;
+  animation: l18 4s infinite linear;
+}
+.blogList .loader::before,
+.blogList .loader::after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  border: inherit;
+  animation: inherit;
+}
+.blogList .loader::after {
+  animation-duration: 2s;
+}
+@keyframes l18 {
+  100% {
+    transform: rotate(1turn);
   }
-  
-  h1 {
-    font-size: 24px;
-    font-family: "IRANSans700";
-    line-height: 26px;
-  }
-  h2 {
-    font-size: 20px;
-    font-family: "IRANSans700";
-    line-height: 26px;
-  }
-  h3 {
-    font-size: 18px;
-    font-family: "IRANSans500";
-    line-height: 25px;
-  }
-  h4,
-  h5 {
-    font-size: 16px;
-    font-family: "IRANSans400";
-    line-height: 24px;
-  }
-  h6 {
-    font-size: 14px;
-    font-family: "IRANSans400";
-    line-height: 22px;
-  }
-  a {
-    font-size: 14px;
-    font-family: "IRANSans500";
-    line-height: 24px;
-  }
-  ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: #f5f5f5;
-  }
-  
-  ::-webkit-scrollbar {
-    width: 2px;
-    background-color: #f5f5f5;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #555;
-  }
+}
