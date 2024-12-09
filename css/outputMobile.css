@@ -661,12 +661,28 @@ video {
   inset-inline-end: 0.25rem;
 }
 
+.right-\[5\%\] {
+  right: 5%;
+}
+
+.left-\[5\%\] {
+  left: 5%;
+}
+
+.top-\[50\%\] {
+  top: 50%;
+}
+
 .isolate {
   isolation: isolate;
 }
 
 .isolation-auto {
   isolation: auto;
+}
+
+.z-1 {
+  z-index: 1;
 }
 
 .float-start {
@@ -746,8 +762,8 @@ video {
   margin-top: 0.5rem;
 }
 
-.mt-\[120px\] {
-  margin-top: 120px;
+.mt-\[146px\] {
+  margin-top: 146px;
 }
 
 .box-border {
@@ -920,6 +936,11 @@ video {
 
 .border-separate {
   border-collapse: separate;
+}
+
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .\!transform {
@@ -2764,8 +2785,9 @@ h6 {
 
 a {
   font-size: 14px;
-  font-family: "IRANSans500";
+  font-family: "IRANSans400";
   line-height: 24px;
+  color: #FC578C;
 }
 
 ::-webkit-scrollbar-track {
