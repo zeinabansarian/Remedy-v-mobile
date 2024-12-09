@@ -171,3 +171,8 @@ a {
     transform: rotate(1turn);
   }
 }
+
+
+.activeImgScroll::after{
+  transform: scaleY(0)!important;
+}

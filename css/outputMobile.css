@@ -661,12 +661,12 @@ video {
   inset-inline-end: 0.25rem;
 }
 
-.right-\[5\%\] {
-  right: 5%;
-}
-
 .left-\[5\%\] {
   left: 5%;
+}
+
+.right-\[5\%\] {
+  right: 5%;
 }
 
 .top-\[50\%\] {
@@ -734,8 +734,26 @@ video {
   margin-right: auto;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
 .mb-2 {
@@ -746,6 +764,10 @@ video {
   margin-bottom: 0.625rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -754,12 +776,28 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
 
+.mb-\[100px\] {
+  margin-bottom: 100px;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .mt-\[146px\] {
@@ -869,8 +907,16 @@ video {
   height: 100%;
 }
 
+.min-h-svh {
+  min-height: 100svh;
+}
+
 .w-90p {
   width: 90%;
+}
+
+.w-\[150px\] {
+  width: 150px;
 }
 
 .w-\[this-is\\\\\] {
@@ -892,6 +938,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
 }
 
 .max-w-\[253px\] {
@@ -1757,12 +1807,20 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-\[30px\] {
+  border-radius: 30px;
+}
+
 .rounded-\[35px\] {
   border-radius: 35px;
 }
 
 .rounded-\[40px\] {
   border-radius: 40px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-md {
@@ -1903,6 +1961,11 @@ video {
   border-color: rgb(24 24 24 / var(--tw-border-opacity, 1));
 }
 
+.border-b-medium_gray {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(126 126 126 / var(--tw-border-opacity, 1));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity, 1));
@@ -1934,6 +1997,16 @@ video {
 
 .bg-white\/\[0\.6\] {
   background-color: rgb(255 255 255 / 0.6);
+}
+
+.from-black {
+  --tw-gradient-from: #000000 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-black {
+  --tw-gradient-to: #000000 var(--tw-gradient-to-position);
 }
 
 .decoration-slice {
@@ -2050,6 +2123,18 @@ video {
   padding: 0.25rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-2\.5 {
+  padding: 0.625rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -2093,6 +2178,10 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .pb-16 {
@@ -2177,6 +2266,10 @@ video {
 
 .text-\[15px\] {
   font-size: 15px;
+}
+
+.text-\[22px\] {
+  font-size: 22px;
 }
 
 .text-lg {
@@ -2856,6 +2949,10 @@ a {
   }
 }
 
+.activeImgScroll::after{
+  transform: scaleY(0)!important;
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -2884,6 +2981,59 @@ a {
       max-width: 1440px;
     }
   }
+}
+
+.after\:absolute::after {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.after\:inset-0::after {
+  content: var(--tw-content);
+  inset: 0px;
+}
+
+.after\:h-full::after {
+  content: var(--tw-content);
+  height: 100%;
+}
+
+.after\:w-full::after {
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.after\:origin-top::after {
+  content: var(--tw-content);
+  transform-origin: top;
+}
+
+.after\:bg-white::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.after\:bg-gradient-to-b::after {
+  content: var(--tw-content);
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.after\:from-black\/\[0\.2\]::after {
+  content: var(--tw-content);
+  --tw-gradient-from: rgb(0 0 0 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.after\:to-black\/\[0\]::after {
+  content: var(--tw-content);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+}
+
+.after\:duration-1000::after {
+  content: var(--tw-content);
+  transition-duration: 1000ms;
 }
 
 .hover\:font-bold:hover {
