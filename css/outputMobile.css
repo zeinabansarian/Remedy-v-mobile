@@ -673,6 +673,14 @@ video {
   top: 50%;
 }
 
+.right-0 {
+  right: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -909,6 +917,10 @@ video {
 
 .min-h-svh {
   min-height: 100svh;
+}
+
+.w-85p {
+  width: 85%;
 }
 
 .w-90p {
