@@ -12,6 +12,8 @@
 </head>
 <body>
     <main class="blogList bg-main_light" dir="rtl">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+        
         <section class="section1 mb-5 w-90p mx-auto pt-[120px]">
             <h1 class=" mb-5 font-YekanBakh700 text-lg text-dark_gray">
 
@@ -57,7 +59,7 @@
                         <div class="blogItem mb-8 rounded-[35px] border border-text_black px-4 py-5">
                             <div class="imgS mb-5 rounded-[35px] overflow-hidden">
                                 <a class="w-full h-full" href="/@link" title="@title">
-                                    <img src="/@00290X00289prp" class="w-full" alt="@title" title="@title">
+                                    <img src="[##cms.cms.cdn##]/@00290X00289prp" class="w-full" alt="@title" title="@title">
                                 </a>
                             </div>
                             <div class="title mb-4 justify-between items-center flex">
@@ -83,6 +85,9 @@
 
             </div>
         </section>
+
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
     </main>
 <basis core="call" file="script-mobile.inc" />
     <script src="[##cms.cms.cdn##]/js/blogList-mobile.js"></script>

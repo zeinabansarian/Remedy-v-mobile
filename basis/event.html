@@ -1,0 +1,145 @@
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
+    <member request="json-ld" type="scalar" name="fq" /> 
+   </basis>
+   <basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
+    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member name="events" type="view"/> </basis>
+    <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]"> <member name="eventsGallery" type="list" format="4"/> </basis>
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <basis core="call" file="styles-mobile.inc" />
+</head>
+
+<body>
+    <div class="eventShow" dir="rtl">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+
+        <section class="section1 mb-5 pt-[120px] w-90p mx-auto">
+            <basis core="print" datamembername="db.events">
+             
+                <face filter="TypeID=150">
+                    <h1 class="font-YekanBakh700 text-[15px] mb-5 text-dark_gray text-justify">
+                      @Answer
+                    </h1>
+                    
+                </face>
+            </basis>
+            <basis core="print" datamembername="db.eventsGallery">
+               
+                <face filter="ord=51">
+                    <div class="imgS">
+                        <img class="w-full" src="[##cms.cms.cdn##]/@largeIMG" alt="@name" title="@name">
+                    </div>
+                    
+                </face>
+            </basis>
+        </section>
+        <section class="section2 w-90p mx-auto">
+            <basis core="print" datamembername="db.events">
+            
+                <face filter="prpID=7245">
+                    <h2 class="font-IRANSans500 text-[15px] text-dark_gray mb-2.5">
+                     @Answer
+                    </h2>
+                    
+                </face>
+            </basis>
+            <basis core="print" datamembername="db.events">
+                
+                <face filter="TypeID=129">
+                    <div class="para font-IRANSans400 text-sm text-justify mb-5">
+                     @Answer
+                    </div>
+                    
+                </face>
+            </basis>
+         
+            <basis core="print" datamembername="db.events">
+                
+                <face filter="TypeID=250">
+                    <h2 class="font-IRANSans500 text-[15px] text-dark_gray mb-2.5">
+                     @text
+                    </h2>
+                    <div class="para font-IRANSans400 text-sm text-justify mb-5">
+                     @largetext
+                    </div>
+                    
+                </face>
+            </basis>
+        </section>
+
+        <basis core="print" datamembername="db.eventsGallery">
+            <layout>
+                <section class="section3 mt-[146px]">
+                    <h3 class="w-90p mx-auto mb-5 font-YekanBakh700 text-lg text-dark_gray">
+                        گالری تصاویر
+                    </h3>
+        
+        
+                    <div class="swiper gallerySlider relative">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                        
+                            @child
+        
+                        </div>
+                        <div class="nextGallery absolute z-1 right-[5%] top-[50%]">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="30" height="30" rx="15" fill="#7E7E7E" />
+                                <path
+                                    d="M12.2181 8.6998L18.5 14.9998L12.2181 21.2998L11.5007 20.5796L17.0638 14.9998L11.5 9.41996L12.2181 8.6998Z"
+                                    fill="white" />
+                            </svg>
+        
+                        </div>
+                        <div class="prevGallery absolute z-1 left-[5%] top-[50%]">
+                            <svg class="rotate-180" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="30" height="30" rx="15" fill="#7E7E7E" />
+                                <path
+                                    d="M12.2181 8.6998L18.5 14.9998L12.2181 21.2998L11.5007 20.5796L17.0638 14.9998L11.5 9.41996L12.2181 8.6998Z"
+                                    fill="white" />
+                            </svg>
+        
+                        </div>
+                    </div>
+                </section>
+              
+            </layout>
+          
+            <face filter="ord=50">
+                <div class="swiper-slide">
+                    <div class="imgS w-full">
+                        <img class="w-full" src="[##cms.cms.cdn##]/@largeIMG" alt="@name" title="@name">
+                    </div>
+                </div>
+            </face>
+        </basis>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
+    </div>
+    <basis core="call" file="script-mobile.inc" />
+
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/eventShow-mobile.js"></script>
+
+    <script type="application/ld+json"> 
+        [##json.fq.column1##] 
+        </script>
+</body>
+
+</html>

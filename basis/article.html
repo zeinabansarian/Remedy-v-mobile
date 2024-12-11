@@ -1,0 +1,75 @@
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
+    <member request="json-ld" type="scalar" name="fq" /> 
+   </basis>
+   <basis core="dbsource" request="seo" source="basiscore" name="db" lid="1" >
+    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]"> <member name="article" type="view"/> </basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]"> <member name="articleGallery" type="list" format="4"/> </basis>	
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
+    <basis core="call" file="styles-mobile.inc" />
+</head>
+<body>
+    <article class="articleShow" dir="rtl">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+
+        <section class="section1 mb-5 w-90p mx-auto pt-[120px]">
+            <basis core="print" datamembername="db.article">
+            
+                <face filter="TypeID=150">
+                    <h1 class="mb-5 font-YekanBakh700 text-[15px]">
+                      @Answer
+                    </h1>
+                    
+                </face>
+            </basis>
+            <basis core="print" datamembername="db.articleGallery">
+              
+                <face filter="ord=50">
+                    <div class="imgS">
+                        <img src="[##cms.cms.cdn##]/@largeIMG" class="w-full" alt="@name" title="@name">
+                    </div>
+                    
+                </face>
+            </basis>
+        </section>
+        <section class="section2 w-90p mx-auto">
+
+            <basis core="print" datamembername="db.article">
+              
+                <face filter="TypeID in (129,250)">
+                    <h2 class="mb-2.5 font-IRANSans500 text-[15px] text-dark_gray">
+                       @text    
+                    </h2>
+                    <div class="para mb-5 font-IRANSans400 text-sm text-justify text-dark_gray">
+                      @largetext
+                    </div>
+                    
+                </face>
+            </basis>
+          
+        </section>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
+    </article>
+    <basis core="call" file="script-mobile.inc" />
+
+
+    <script type="application/ld+json"> 
+        [##json.fq.column1##] 
+        </script>
+</body>
+</html>

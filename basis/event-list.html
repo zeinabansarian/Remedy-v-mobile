@@ -1,0 +1,70 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="211807"> <member name="meventList" type="list" size="290x289" propertyid="7244,7249" postsql=" select *, SUBSTR(prp_7244, 1,100-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 100)))) || '...' as substr from [db.meventList]"/> </basis>
+
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رویدادها</title>
+    <meta name="description" content="رویدادهای ایده آل گرایان فردا">
+    <basis core="call" file="styles-mobile.inc" />
+</head>
+<body>
+    <section class="eventList bg-light_gray" dir="rtl">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+
+        <div class="w-90p mx-auto pt-[120px]">
+            <h1 class=" mb-5 font-YekanBakh700 text-lg text-dark_gray">
+                رویداد
+            </h1>
+            <div class="eventContainer">
+
+                <basis core="print" datamembername="db.meventList">
+                    
+                    <else-layout>
+                        <div class="para font-IRANSans400 text-sm text-dark_gray">
+                            <p>
+                                متاسفانه رویدادی موجود نیست.
+                            </p>
+                        </div>
+                    </else-layout>
+                    <face>
+                        <div class="eventBox mb-8 px-4 py-5 border border-text_black">
+                            <div class="imgS mb-4">
+                                <a href="/@link" title="@title">
+                                    <img class="w-full" src="[##cms.cms.cdn##]/@00290X00289prp" alt="@title" title="@title">
+                                </a>
+                            </div>
+                            <div class="title flex gap-x-2 mb-4 items-center">
+                                <a href="/@link" title="@title">
+        
+                                    <h2 class="font-IRANSans500 text-[15px] text-text_black">
+                                       @title
+                                    </h2>
+                                </a>
+                                <span class="font-IRANSans400 text-sm text-text_black">
+                                  @prp_7249
+                                </span>
+                            </div>
+                            <div class="para font-IRANSans400 text-sm text-justify text-text_black">
+        
+                                <p>
+@substr
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </face>
+                </basis>
+            </div>
+        </div>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
+    </section>
+
+
+    <basis core="call" file="script-mobile.inc" />
+
+</body>
+</html>

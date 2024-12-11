@@ -1,5 +1,7 @@
 
 let filterBtn = document.querySelectorAll(".filterBtn")
+filterBtn[0].classList.add("activeFilter")
+
 let loaderContainer = document.querySelector(".loaderContainer")
 filterBtn.forEach(element => {
 element.addEventListener("click" , function (params) {
