@@ -1,51 +1,64 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2365069"> <member name="learning" type="view"/> </basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2365069"> <member name="learningGallery" type="list" format="4"/> </basis>	
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="11" catid="211847"> <member name="mtrainerList" type="list" size="360x390" propertyid="2739"/> </basis>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/outputMobile.css">
+    <title>آموزش ها</title>
+    <meta name="description" content="آموزش های ایده‌آل گرایان فردا">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <basis core="call" file="styles-mobile.inc" />
 </head>
 <body>
     
     <main class="learning" dir="rtl">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+
         <section class="section1 bg-main_light pt-[120px]">
-            <h1 class="max-w-[200px] mx-auto text-center font-YekanBakh700 text-lg pb-5 border-b border-b-medium_gray mb-8">
-                یادگیری نکات مهم مراقبت و زیبایی مو 
-            </h1>
-            <div class="para mx-auto max-w-[200px] mb-10 font-IRANSans400 text-sm text-dark_gray text-center">
-                <p>
-                    شرکت ایده آل گرایان فرداد با اسم مستعار ریمدی،فعالیت خودرا از سال 1394 آغاز کرده است.
-                </p>
-            </div>
+            <basis core="print" datamembername="db.learning">
+               
+                <face filter="TypeID=128">
+                    <h1 class="max-w-[200px] mx-auto text-center font-YekanBakh700 text-lg pb-5 border-b border-b-medium_gray mb-8">
+                       @Answer
+                    </h1>
+                    
+                </face>
+            </basis>
+
+            <basis core="print" datamembername="db.learning">
+            
+                <face filter="TypeID=129">
+                    <div class="para mx-auto max-w-[200px] mb-10 font-IRANSans400 text-sm text-dark_gray text-center">
+                      @largetext
+                    </div>
+                    
+                </face>
+            </basis>
 
             <div class="sliderSection pb-5 w-90p mx-auto">
                 <div class="swiper slider1 rounded-[20px]">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                       <!-- Slides -->
+
+                      <basis core="print" datamembername="db.learningGallery">
+                        
+                          <face filter="ord=1000">
+                              
+                              <div class="swiper-slide group/slidesG">
+                                    <div class="imgS p-1 rounded-[20px] overflow-hidden group-[&.swiper-slide-active]/slidesG:border group-[&.swiper-slide-active]/slidesG:border-white group-[&.swiper-slide-active]/slidesG:duration-500 ">
+                                        <img class="w-full" src="[##cms.cms.cdn##]/@largeIMG" alt="@name" title="@name">
+                                    </div>
+                              </div>
+                          </face>
+                      </basis>
                       
-                      <div class="swiper-slide group/slidesG">
-                            <div class="imgS p-1 rounded-[20px] overflow-hidden group-[&.swiper-slide-active]/slidesG:border group-[&.swiper-slide-active]/slidesG:border-white group-[&.swiper-slide-active]/slidesG:duration-500 ">
-                                <img class="w-full" src="images/medium-shot-smiley-doctor-applying-treatment.png" alt="@name" title="@name">
-                            </div>
-                      </div>
-                      <div class="swiper-slide group/slidesG">
-                            <div class="imgS p-1 rounded-[20px] overflow-hidden group-[&.swiper-slide-active]/slidesG:border group-[&.swiper-slide-active]/slidesG:border-white">
-                                <img class="w-full" src="images/medium-shot-smiley-doctor-applying-treatment.png" alt="@name" title="@name">
-                            </div>
-                      </div>
-                      <div class="swiper-slide group/slidesG">
-                            <div class="imgS p-1 rounded-[20px] overflow-hidden group-[&.swiper-slide-active]/slidesG:border group-[&.swiper-slide-active]/slidesG:border-white">
-                                <img class="w-full" src="images/medium-shot-smiley-doctor-applying-treatment.png" alt="@name" title="@name">
-                            </div>
-                      </div>
-                      <div class="swiper-slide group/slidesG">
-                            <div class="imgS p-1 rounded-[20px] overflow-hidden group-[&.swiper-slide-active]/slidesG:border group-[&.swiper-slide-active]/slidesG:border-white">
-                                <img class="w-full" src="images/medium-shot-smiley-doctor-applying-treatment.png" alt="@name" title="@name">
-                            </div>
-                      </div>
+                    
                      
                 
                     </div>
@@ -56,27 +69,36 @@
           
         </section>
         <section class="section2 ">
-            <div class="imgS mb-10">
-                <img class="w-full" src="images/medium-shot-smiley-doctor-applying-treatment.png" alt="@name" title="@name">
-            </div>
-            <section class=" w-90p mx-auto">
-                <div class="pBox mb-20">
-                    <div class="imgS flex items-center justify-center pb-5 border-b border-b-medium_gray mb-10">
-                        <img src="images/hair_care 1.png" alt="">
+
+            <basis core="print" datamembername="db.mtrainerList">
+           
+                <face>
+                    <div class="imgS mb-10">
+                        <img class="w-full" src="[##cms.cms.cdn##]/@00360X00390prp" alt="@name" title="@name">
                     </div>
-                    <h4 class="text-center font-YekanBakh700 mb-20 text-lg text-dark_gray scrollTop">
-                        اهداف و استراتژی
-                    </h4>
-                    <div class="para font-IRANSans400 text-sm text-center text-dark_gray scrollTop">
-                        <p>
-                            هدف ما هدایت این صنعت با ارائه راه‌حل‌های مبتنی بر فناوری‌های نوین و خدمات متمایز است. استراتژی‌های کلیدی ما متمرکز بر توسعه محصول، شناخت بازار و ارتقای سطح رضایت مشتریان می‌باشد.
-                        </p>
-                    </div>
-                </div>
-            </section>
+                    <section class=" w-90p mx-auto">
+        
+        
+                        <div class="pBox mb-20">
+                            <div class="imgS flex items-center justify-center pb-5 border-b border-b-medium_gray mb-10">
+                                <img src="images/hair_care 1.png" alt="">
+                            </div>
+                            <h4 class="text-center font-YekanBakh700 mb-20 text-lg text-dark_gray scrollTop">
+                              @title
+                            </h4>
+                            <div class="para font-IRANSans400 text-sm text-center text-dark_gray scrollTop">
+                                <p>
+@prp_2739
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                </face>
+            </basis>
           
         </section>
-        <section class="section3 bg-main_light py-10">
+        <!-- <section class="section3 bg-main_light py-10">
             <div class="title w-90p mb-4 mx-auto">
 
                 <span class="font-YekanBakh700 text-[15px] mb-1 text-main">
@@ -114,10 +136,14 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </section> -->
         
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
     </main>
-    <script src="js/swiper-bundle11.0.5.min.js"></script>
-    <script src="js/learning-mobile.js"></script>
+    <basis core="call" file="script-mobile.inc" />
+
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/learning-mobile.js"></script>
 </body>
 </html>

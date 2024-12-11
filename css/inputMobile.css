@@ -76,7 +76,9 @@
 * {
   font-family: "IRANSans400";
 }
-
+html {
+  font-size: unset;
+}
 h1 {
   font-size: 24px;
   font-family: "IRANSans700";
@@ -181,12 +183,11 @@ a {
   transition: all 1s ease;
 }
 
-.rotateArrow{
+.rotateArrow {
   transform: rotate(-90deg);
 }
 
-
-.learning .section1 .swiper-pagination-bullet{
+.learning .section1 .swiper-pagination-bullet {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,17 +199,17 @@ a {
   stroke-dasharray: 1000;
   stroke-dashoffset: 0;
   -webkit-animation: dash linear 120s;
-          animation: dash linear 120s;
+  animation: dash linear 120s;
   -webkit-animation-iteration-count: unset;
-          animation-iteration-count: unset;
+  animation-iteration-count: unset;
 }
 .learning .section1 .swiper-pagination-bullet svg {
-flex-shrink: 0;
-width: 10px;
+  flex-shrink: 0;
+  width: 10px;
 }
 
 .learning .section1 .swiper-pagination-bullet-active .circlesss {
-fill: #FC578C;
+  fill: #fc578c;
 }
 .learning .section1 .path {
   display: none;
