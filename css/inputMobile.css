@@ -184,3 +184,48 @@ a {
 .rotateArrow{
   transform: rotate(-90deg);
 }
+
+
+.learning .section1 .swiper-pagination-bullet{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  background-color: white;
+}
+.learning .section1 .swiper-pagination-bullet-active .path {
+  display: inline-block !important;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash linear 120s;
+          animation: dash linear 120s;
+  -webkit-animation-iteration-count: unset;
+          animation-iteration-count: unset;
+}
+.learning .section1 .swiper-pagination-bullet svg {
+flex-shrink: 0;
+width: 10px;
+}
+
+.learning .section1 .swiper-pagination-bullet-active .circlesss {
+fill: #FC578C;
+}
+.learning .section1 .path {
+  display: none;
+}
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

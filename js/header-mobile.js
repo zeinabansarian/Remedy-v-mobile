@@ -25,14 +25,10 @@ openProMega.addEventListener("click" , function (params) {
 
 })
 
-innerMegaListIn.forEach(element => {
-    console.log();
-    if (!element.querySelector(".innerMega2")) {
-        
-        element.querySelector(".titleMenu .innerOpen").remove()
+innerMega2.forEach(element => {
+    if (!element.querySelector("ul li")) {
+        element.parentElement.querySelector(".innerOpen").remove()
     }
- 
- 
 });
 
 
