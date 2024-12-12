@@ -2,12 +2,15 @@
   [data-bc-part-container] {
     width: 100%;
   }
+
   [data-bc-part] {
     margin: 0;
   }
+
   [data-bc-title-container] {
     display: none;
   }
+
   input,
   textarea,
   input::placeholder {
@@ -17,24 +20,29 @@
     line-height: 21.91px !important;
     color: #434343 !important;
   }
+
   input,
   textarea {
     border: none !important;
     border-bottom: 1px solid #434343 !important;
     border-radius: 0 !important;
   }
+
   [data-bc-question] {
     margin-bottom: 20px;
   }
+
   .responsMsg1 {
     margin-bottom: 10px;
     display: none;
   }
+
   .qclass8 {
     width: 80%;
     max-width: 277px;
     margin: 0 auto 40px auto;
   }
+
   .captchaContainerclass {
     display: flex;
     align-items: center;
@@ -43,9 +51,11 @@
     padding: 10px 17px;
     background-color: #e8e1e3;
     column-gap: 14px;
+
     .captcha-sefaresh {
       flex-shrink: 0;
     }
+
     input {
       background-color: white !important;
     }
@@ -59,7 +69,7 @@
 
   .afterStar [data-bc-schema-info-part="1"] [data-bc-part-related-cell]::after {
     content: "*";
-    color: #FC578C;
+    color: #fc578c;
     position: absolute;
     top: 6px;
   }
@@ -92,5 +102,231 @@
     [data-bc-schema-info-part="1"]
     [data-bc-part-related-cell]::after {
     right: 36px;
+  }
+}
+
+.formModares {
+  .afterStar [data-bc-schema-info-part="1"] [data-bc-part-related-cell] {
+    position: relative;
+  }
+
+  .afterStar [data-bc-schema-info-part="1"] [data-bc-part-related-cell]::after {
+    content: "*";
+    color: #fc578c;
+    position: absolute;
+    top: 6px;
+  }
+
+  .afterStar:nth-child(1)
+    [data-bc-schema-info-part="1"]
+    [data-bc-part-related-cell]::after {
+    right: 120px;
+  }
+
+  .afterStar:nth-child(2)
+    [data-bc-schema-info-part="1"]
+    [data-bc-part-related-cell]::after {
+    right: 80px;
+  }
+
+  .afterStar:nth-child(3)
+    [data-bc-schema-info-part="1"]
+    [data-bc-part-related-cell]::after {
+    right: 96px;
+  }
+
+  .afterStar:nth-child(4)
+    [data-bc-schema-info-part="1"]
+    [data-bc-part-related-cell]::after {
+    right: 87px;
+  }
+
+  .afterStar:nth-child(5)
+    [data-bc-schema-info-part="1"]
+    [data-bc-part-related-cell]::after {
+    right: 36px;
+  }
+}
+
+.formEstekhdam {
+  .afterStar [data-bc-schema-info-part="1"] [data-bc-part-related-cell] {
+    position: relative;
+  }
+
+  .afterStar [data-bc-schema-info-part="1"] [data-bc-part-related-cell]::after {
+    content: "*";
+    color: #fc578c;
+    position: absolute;
+    top: 6px;
+  }
+
+  legend {
+    width: 100%;
+
+    font-size: 15px;
+    line-height: 23.48px;
+    font-family: "IRANSans500";
+  }
+
+  fieldset:nth-child(1) {
+    .afterStar:nth-child(1)
+      [data-bc-schema-info-part="1"]
+      [data-bc-part-related-cell]::after {
+      right: 27px;
+    }
+
+    .afterStar:nth-child(2)
+      [data-bc-schema-info-part="1"]
+      [data-bc-part-related-cell]::after {
+      right: 80px;
+    }
+
+    .afterStar:nth-child(3)
+      [data-bc-schema-info-part="1"]
+      [data-bc-part-related-cell]::after {
+      right: 110px;
+    }
+  }
+
+  fieldset:nth-child(2) {
+    legend {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      column-gap: 12px;
+    }
+
+    legend::before {
+      content: "";
+      width: 8px;
+      height: 1px;
+      display: block;
+      background-color: #7e7e7e;
+      flex-shrink: 0;
+    }
+
+    legend::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-color: #7e7e7e;
+    }
+
+    .afterStar:nth-child(1)
+      [data-bc-schema-info-part="1"]
+      [data-bc-part-related-cell]::after {
+      right: 90px;
+    }
+
+    .afterStar:nth-child(2)
+      [data-bc-schema-info-part="1"]
+      [data-bc-part-related-cell]::after {
+      right: 120px;
+    }
+  }
+
+  fieldset:nth-child(3) {
+    legend {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      column-gap: 12px;
+    }
+
+    legend::before {
+      content: "";
+      width: 8px;
+      height: 1px;
+      display: block;
+      background-color: #7e7e7e;
+      flex-shrink: 0;
+    }
+
+    legend::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-color: #7e7e7e;
+    }
+
+    .afterStar:nth-child(1)
+      [data-bc-schema-info-part="1"]
+      [data-bc-part-related-cell]::after {
+      right: 72px;
+    }
+
+    .afterStar:nth-child(2)
+      [data-bc-schema-info-part="1"]
+      [data-bc-part-related-cell]::after {
+      right: 80px;
+    }
+  }
+
+  [data-bc-answer] {
+    display: flex;
+    align-items: center;
+
+    button {
+      border-radius: 100%;
+      background-color: transparent;
+      width: 24px;
+      height: 24px;
+      border: 3px solid #434343;
+
+      path {
+        fill: #434343;
+      }
+    }
+  }
+
+  fieldset:first-child {
+    legend {
+      display: none;
+    }
+  }
+
+  fieldset:nth-child(4),
+  fieldset:nth-child(6),
+  fieldset:nth-child(5) {
+    legend {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      column-gap: 12px;
+    }
+
+    legend::before {
+      content: "";
+      width: 8px;
+      height: 1px;
+      display: block;
+      background-color: #7e7e7e;
+      flex-shrink: 0;
+    }
+
+    legend::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-color: #7e7e7e;
+    }
+
+    .afterStar
+      [data-bc-schema-info-part="1"]
+      [data-bc-part-related-cell]::after {
+      display: none;
+    }
+
+    input,
+    textarea {
+      border-bottom: none !important;
+    }
+
+    [data-bc-answer] {
+      border-bottom: 1px solid #434343 !important;
+    }
   }
 }

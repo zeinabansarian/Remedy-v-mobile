@@ -11,7 +11,8 @@ const host = {
     "default.binding.regex": "\\{##([^#]*)##\\}",
   },
 };
-let loaderContainer = document.querySelector(".loaderContainer")
+window.scrollTo(0,0)
+let loaderContainer = document.querySelector(".loaderContainer");
 
 function onSource1(args) {
   console.log("onSource");
@@ -42,13 +43,13 @@ async function OnProcessedEditObject1(args) {
     console.log(json);
     responsMsgIn.innerHTML = "فرم با موفقیت ثبت شد.";
     responsMsg.style.display = "block";
-    document.querySelector("form").reset()
+    document.querySelector("form").reset();
     let questions = document.querySelectorAll(
       ".homeForm1 div[data-bc-question]"
     );
     questions.forEach((element) => {
       element.classList.add("afterStar");
-    })
+    });
     setTimeout(() => {
       responsMsg.style.display = "none";
     }, 2000);
@@ -66,17 +67,14 @@ async function OnProcessedEditObject1(args) {
 }
 
 function renderFn1(params) {
+  window.scrollTo(0,0)
 
-    loaderContainer.style.display="none";
-  let questions = document.querySelectorAll(
-    ".homeForm1 div[data-bc-question]"
-  );
+  loaderContainer.style.display = "none";
+  let questions = document.querySelectorAll(".homeForm1 div[data-bc-question]");
   questions.forEach((element) => {
     element.classList.add("afterStar");
 
-    let title = element.querySelector(
-      ".homeForm1 [data-bc-question-title]"
-    );
+    let title = element.querySelector(".homeForm1 [data-bc-question-title]");
     let qInput = element.querySelector(".homeForm1 input");
     let qTxtArea = element.querySelector(".homeForm1 _textarea");
     if (title) {
@@ -91,44 +89,33 @@ function renderFn1(params) {
     }
     console.log("q", qInput);
   });
-  let inputs = document.querySelectorAll("input")
-  inputs.forEach(element => {
+  let inputs = document.querySelectorAll("input");
+  inputs.forEach((element) => {
     element.addEventListener("input", function (params) {
       if (this.value == "") {
         console.log("epmty");
-        $(this).closest("div[data-bc-question]").addClass("afterStar")
-
+        $(this).closest("div[data-bc-question]").addClass("afterStar");
+      } else {
+        $(this).closest("div[data-bc-question]").removeClass("afterStar");
       }
-      else {
-        $(this).closest("div[data-bc-question]").removeClass("afterStar")
-      }
-
-    })
+    });
   });
 
-
-
-  let textAreas = document.querySelectorAll("textarea")
-  textAreas.forEach(element => {
+  let textAreas = document.querySelectorAll("textarea");
+  textAreas.forEach((element) => {
     element.addEventListener("input", function (params) {
       console.log($(this).closest("div[data-bc-question]"));
 
       if (this.value == "") {
         console.log("epmty");
-        $(this).closest("div[data-bc-question]").addClass("afterStar")
-
+        $(this).closest("div[data-bc-question]").addClass("afterStar");
+      } else {
+        $(this).closest("div[data-bc-question]").removeClass("afterStar");
       }
-      else {
-        $(this).closest("div[data-bc-question]").removeClass("afterStar")
-      }
-
-    })
+    });
   });
-
-
 }
 
-
 function renderEditobject(params) {
-  loaderContainer.style.display="none";
+  loaderContainer.style.display = "none";
 }
