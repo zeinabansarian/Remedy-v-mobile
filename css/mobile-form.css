@@ -1,0 +1,76 @@
+.formPage [data-bc-part-container] {
+  width: 100%;
+}
+.formPage [data-bc-part] {
+  margin: 0;
+}
+.formPage [data-bc-title-container] {
+  display: none;
+}
+.formPage input,
+.formPage textarea,
+.formPage input::placeholder {
+  background-color: transparent !important;
+  font-family: "IRANSans400" !important;
+  font-size: 14px !important;
+  line-height: 21.91px !important;
+  color: #434343 !important;
+}
+.formPage input,
+.formPage textarea {
+  border: none !important;
+  border-bottom: 1px solid #434343 !important;
+  border-radius: 0 !important;
+}
+.formPage [data-bc-question] {
+  margin-bottom: 20px;
+}
+.formPage .responsMsg1 {
+  margin-bottom: 10px;
+  display: none;
+}
+.formPage .qclass8 {
+  width: 80%;
+  max-width: 277px;
+  margin: 0 auto 40px auto;
+}
+.formPage .captchaContainerclass {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 12px auto;
+  width: 100%;
+  padding: 10px 17px;
+  background-color: #e8e1e3;
+  column-gap: 14px;
+}
+.formPage .captchaContainerclass .captcha-sefaresh {
+  flex-shrink: 0;
+}
+.formPage .captchaContainerclass input {
+  background-color: white !important;
+}
+
+.formNamayandegi .afterStar [data-bc-schema-info-part="1"] [data-bc-part-related-cell] {
+  position: relative;
+}
+.formNamayandegi .afterStar [data-bc-schema-info-part="1"] [data-bc-part-related-cell]::after {
+  content: "*";
+  color: #FC578C;
+  position: absolute;
+  top: 6px;
+}
+.formNamayandegi .afterStar:nth-child(1) [data-bc-schema-info-part="1"] [data-bc-part-related-cell]::after {
+  right: 120px;
+}
+.formNamayandegi .afterStar:nth-child(2) [data-bc-schema-info-part="1"] [data-bc-part-related-cell]::after {
+  right: 80px;
+}
+.formNamayandegi .afterStar:nth-child(3) [data-bc-schema-info-part="1"] [data-bc-part-related-cell]::after {
+  right: 96px;
+}
+.formNamayandegi .afterStar:nth-child(4) [data-bc-schema-info-part="1"] [data-bc-part-related-cell]::after {
+  right: 87px;
+}
+.formNamayandegi .afterStar:nth-child(5) [data-bc-schema-info-part="1"] [data-bc-part-related-cell]::after {
+  right: 36px;
+}/*# sourceMappingURL=mobile-form.css.map */

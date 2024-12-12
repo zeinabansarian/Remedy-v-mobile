@@ -132,7 +132,7 @@ a {
   background-color: white !important;
 }
 
-.blogList .loader {
+.loader {
   width: 25px;
   height: 50px;
   display: grid;
@@ -157,15 +157,15 @@ a {
   background-repeat: no-repeat;
   animation: l18 4s infinite linear;
 }
-.blogList .loader::before,
-.blogList .loader::after {
+.loader::before,
+.loader::after {
   content: "";
   grid-area: 1/1;
   background: inherit;
   border: inherit;
   animation: inherit;
 }
-.blogList .loader::after {
+.loader::after {
   animation-duration: 2s;
 }
 @keyframes l18 {
@@ -229,4 +229,30 @@ a {
   to {
     stroke-dashoffset: 0;
   }
+}
+
+.homePage .blogBox:nth-child(even) h4,
+.homePage .blogBox:nth-child(even) p,
+.homePage .blogBox:nth-child(even) a {
+  color: white;
+}
+
+.homePage .blogBox:nth-child(even) {
+  background-color: #434343;
+  border: 1px solid white;
+}
+
+.homePage .paging span {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: white;
+  transition: 0.5s;
+}
+.activePageSpan {
+  background-color: #fc578c !important;
+}
+
+.homePage .footerScrollTop {
+  display: none;
 }

@@ -1,0 +1,96 @@
+.formPage {
+  [data-bc-part-container] {
+    width: 100%;
+  }
+  [data-bc-part] {
+    margin: 0;
+  }
+  [data-bc-title-container] {
+    display: none;
+  }
+  input,
+  textarea,
+  input::placeholder {
+    background-color: transparent !important;
+    font-family: "IRANSans400" !important;
+    font-size: 14px !important;
+    line-height: 21.91px !important;
+    color: #434343 !important;
+  }
+  input,
+  textarea {
+    border: none !important;
+    border-bottom: 1px solid #434343 !important;
+    border-radius: 0 !important;
+  }
+  [data-bc-question] {
+    margin-bottom: 20px;
+  }
+  .responsMsg1 {
+    margin-bottom: 10px;
+    display: none;
+  }
+  .qclass8 {
+    width: 80%;
+    max-width: 277px;
+    margin: 0 auto 40px auto;
+  }
+  .captchaContainerclass {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 12px auto;
+    width: 100%;
+    padding: 10px 17px;
+    background-color: #e8e1e3;
+    column-gap: 14px;
+    .captcha-sefaresh {
+      flex-shrink: 0;
+    }
+    input {
+      background-color: white !important;
+    }
+  }
+}
+
+.formNamayandegi {
+  .afterStar [data-bc-schema-info-part="1"] [data-bc-part-related-cell] {
+    position: relative;
+  }
+
+  .afterStar [data-bc-schema-info-part="1"] [data-bc-part-related-cell]::after {
+    content: "*";
+    color: #FC578C;
+    position: absolute;
+    top: 6px;
+  }
+
+  .afterStar:nth-child(1)
+    [data-bc-schema-info-part="1"]
+    [data-bc-part-related-cell]::after {
+    right: 120px;
+  }
+
+  .afterStar:nth-child(2)
+    [data-bc-schema-info-part="1"]
+    [data-bc-part-related-cell]::after {
+    right: 80px;
+  }
+
+  .afterStar:nth-child(3)
+    [data-bc-schema-info-part="1"]
+    [data-bc-part-related-cell]::after {
+    right: 96px;
+  }
+
+  .afterStar:nth-child(4)
+    [data-bc-schema-info-part="1"]
+    [data-bc-part-related-cell]::after {
+    right: 87px;
+  }
+
+  .afterStar:nth-child(5)
+    [data-bc-schema-info-part="1"]
+    [data-bc-part-related-cell]::after {
+    right: 36px;
+  }
+}
