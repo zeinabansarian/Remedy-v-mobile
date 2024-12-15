@@ -1,0 +1,227 @@
+<basis core="dbsource" request="seo" source="basiscore" name="db" lid="1">
+    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]">
+    <member request="json-ld" type="scalar" name="fq" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2369289"> <member name="product" type="view"/> </basis>	
+ <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="2369289"> <member name="image-product" type="list" format="4"/> </basis>
+ <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20" usedforid="2369289"> <member type="list" name="relatedPro" size="320x304" blgid="18" /> </basis>
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
+    <link rel='stylesheet' href='[##cms.cms.cdn##]/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <basis core="call" file="styles-mobile.inc" />
+</head>
+
+<body>
+    <main class="productShow bg-light_gray" dir="rtl">
+        <basis core="call" file="header2.inc" pageindex="[##cms.cms.pageindex##]" />
+        <section class="section1 mb-10 w-90p mx-auto pt-[120px]">
+            <basis core="print" datamembername="db.product">
+
+                <face filter="TypeID=150">
+                    <h1 class="font-YekanBakh700 text-lg text-dark_gray mb-4">
+                        @Answer
+                    </h1>
+
+                </face>
+            </basis>
+            <!-- <p class="font-IRANSans400 text-sm text-dark_gray mb-2.5">
+                فورمالاسیون ایتالیا
+            </p> -->
+            <basis core="print" datamembername="db.product">
+
+                <face filter="TypeID=144">
+                    <div class="para font-IRANSans400 text-sm text-dark_gray text-justify">
+                        @largetext
+                    </div>
+
+                </face>
+            </basis>
+        </section>
+        <section class="section2 mb-10">
+            <basis core="print" datamembername="db.image-product">
+                <layout>
+                    <div class="swiper imgsSlider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            @child
+                        </div>
+
+                    </div>
+                </layout>
+                <face filter="ord=50">
+
+                    <div class="swiper-slide">
+
+                        <div class="imgS w-full">
+                            <img class="w-full" src="[##cms.cms.cdn##]/@largeIMG" alt="@name" title="@name">
+                        </div>
+
+                    </div>
+                </face>
+            </basis>
+
+
+            <basis core="print" datamembername="db.image-product">
+                <layout>
+                    <div class="thumbs flex items-center justify-center mt-5 w-85p mx-auto relative">
+                        <div class="swiper w-90p mx-auto thumbsSlider">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+
+                                @child
+                            </div>
+
+                        </div>
+                        <div class="nextThumb absolute right-0">
+                            <svg width="10" height="19" viewBox="0 0 10 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.02584 0.5L10 9.5L1.02584 18.5L0.000965118 17.4712L7.94832 9.5L0 1.52879L1.02584 0.5Z"
+                                    fill="#434343" />
+                            </svg>
+
+                        </div>
+                        <div class="prevThumb absolute left-0">
+                            <svg class="rotate-180" width="10" height="19" viewBox="0 0 10 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.02584 0.5L10 9.5L1.02584 18.5L0.000965118 17.4712L7.94832 9.5L0 1.52879L1.02584 0.5Z"
+                                    fill="#434343" />
+                            </svg>
+
+                        </div>
+                    </div>
+
+                </layout>
+
+                <face filter="ord=50">
+                    <div class="swiper-slide">
+
+                        <div class="imgS w-full">
+                            <img class="w-full" src="[##cms.cms.cdn##]/@largeIMG" alt="@name" title="@name">
+                        </div>
+
+                    </div>
+                </face>
+            </basis>
+        </section>
+        <section class="section3 mb-10 w-90p mx-auto">
+            <button type="button"
+                class="btn bg-text_black rounded-[15px] py-2.5 px-16 text-white font-IRANSans400 text-sm mb-10 hover:text-white focus:text-white outline-none hover:outline-none focus:outline-none w-full"
+                data-toggle="modal" data-target=".bs-example-modal-new">
+                فرم سفارش محصول
+            </button>
+
+
+            <div class="modal fade bs-example-modal-new" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                aria-hidden="true">
+
+                <div class="modal-dialog">
+
+                    <!-- Modal Content: begins -->
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header border-0">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            <div class="body-message">
+                                <h4 class="font-IRANSans400 text-lg text-dark_gray mb-5">
+                                    سفارش محصول
+                                </h4>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!-- Modal Content: ends -->
+
+                </div>
+
+            </div>
+
+<basis core="print" datamembername="db.product">
+  
+    <face filter="TypeID not in (159,144,150)">
+        <div class="schemas mb-5">
+            <span class="font-IRANSans400 text-[15px] text-dark_gray mb-2.5">
+                @Question:
+            </span>
+            <div class="para  font-IRANSans400 text-sm text-dark_gray">
+                <p>
+                    @Answer
+                </p>
+            </div>
+        </div>
+        
+    </face>
+</basis>
+        </section>
+
+        <basis core="print" datamembername="db.relatedPro">
+            <layout>
+            
+                <section class="section5 py-10 w-90p mx-auto">
+                    <h2 class="font-YekanBakh700 text-lg text-dark_gray mb-10">
+                        محصولات مرتبط
+                    </h2>
+                    <div class="productConatainer">
+                      
+    @child
+
+                    </div>
+                </section>
+            </layout>
+            <face>
+                <div class="productBox mb-10 last:mb-0">
+                    <div class="imgS mb-4">
+                        <a href="/@link" title="@title">
+                            <img src="[##cms.cms.cdn##]/@00320X00304prp" class="w-full" alt="@title" title="@title">
+                        </a>
+                    </div>
+                    <a href="/@link">
+                        <h4 class="font-IRANSans500 text-[15px] text-dark_gray">
+                          @title
+                        </h4>
+                    </a>
+                </div>
+            </face>
+        </basis>
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+
+    </main>
+
+    <basis core="call" file="script-mobile.inc" />
+
+    <script src='[##cms.cms.cdn##]/_js/bootstrap3.3.7.min.js'></script>
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/productShow-mobile.js"></script>
+
+    <script type="application/ld+json">
+        [##json.fq.column1##] 
+        </script>
+</body>
+
+</html>

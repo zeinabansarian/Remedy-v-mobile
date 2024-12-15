@@ -41,7 +41,7 @@
   src: url("../_fonts/IRANSansFaNum-Regular.eot");
   src: url("../_fonts/IRANSansFaNum-Regular.eot?#iefix")
       format("embedded-opentype"),
-    url("../_fonts/IRANSansFaNum-Regular.woff") format("woff"),
+    /* url("../_fonts/IRANSansFaNum-Regular.woff") format("woff"), */
     url("../_fonts/IRANSansFaNum-Regular.woff2") format("woff2"),
     url("../_fonts/IRANSansFaNum-Regular.ttf") format("truetype");
   font-weight: 400;
