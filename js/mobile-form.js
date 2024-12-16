@@ -83,8 +83,10 @@ function renderFn1(params) {
       ).innerHTML;
       if (qInput) {
         qInput.setAttribute("placeholder", title);
+        qInput.setAttribute("aria-label", title);
       } else if (qTxtArea) {
         qTxtArea.setAttribute("placeholder", title);
+        qTxtArea.setAttribute("aria-label", title);
       }
     }
     console.log("q", qInput);

@@ -49,12 +49,12 @@
                                 <script type="text/template">
 
                         <span class="captcha-sefaresh">
-                            <img src="/@captcha@" width="88" height="44" class="captcha-sefaresh"
+                            <img src="/@captcha@" alt="captcha" width="88" height="44" class="captcha-sefaresh"
                                 alt="captcha" title="captcha" />
-                            <input type="hidden" name="captchaid" value="@captcha@" />
+                            <input type="hidden" name="captchaid" aria-label="captcha" value="@captcha@" />
                         </span>
-                    <img src="[##cms.cms.cdn##]/images/cached.png" class="refressh cursor-pointer refressh1" run="atclient" bc-triggers="click" bc-name="cms.reload1" />
-                    <input type="text" class="codeinputm" name="captcha"
+                    <img src="[##cms.cms.cdn##]/images/cached.png" alt="refressh" class="refressh cursor-pointer refressh1" run="atclient" bc-triggers="click" bc-name="cms.reload1" />
+                    <input type="text" class="codeinputm" name="captcha" aria-label="captcha2"
                         />
                   </script>
                             </face>
